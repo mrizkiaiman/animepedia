@@ -10,4 +10,10 @@ export interface APIResponse<T = any> {
   meta?: any
   data: T
   pagination?: any
+  status?: number
+  type?: string
+  message?: string
+  trace?: string
+  error?: string
+  report_url?: string
 }

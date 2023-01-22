@@ -12,6 +12,5 @@ export const GET = async <T = APIResponse>(
     ...(config ?? {}),
     headers,
   })
-
   return data
 }

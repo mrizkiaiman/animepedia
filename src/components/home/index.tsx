@@ -6,12 +6,14 @@ import Image from 'next/image'
 import { AnimeCard } from '@components/anime-card'
 import { AnimeCardLoader } from '@app/components/anime-card/loader'
 import { SEO } from '@components-wrapper/seo'
+import { HiOutlineDocumentDownload } from 'react-icons/hi'
+import { ErrorPage } from '@components/error-page'
 
 const Home = () => {
   const skeletonLoader = Array(12).fill('-')
   const [page, setPage] = React.useState<number>(1)
 
-  const { data, isLoading } = useAnimeList(page)
+  const { data, isLoading, error, isError } = useAnimeList(page)
   const list = data?.data || []
 
   const onPreviousPage = () =>
@@ -21,12 +23,20 @@ const Home = () => {
     })
   const onNextPage = () => setPage(page => page + 1)
 
+  if (isError) return <ErrorPage message={error.message} />
+
   return (
     <>
       <SEO {...HOME} />
       <div className="flex flex-col md:flex-row justify-center items-center pb-12">
-        <Image src="/main/icon.webp" height={200} width={200} alt="animepedia-icon" />
-        <p className="font-extrabold md:ml-8 text-4xl md:text-7xl tracking-tighter">Animepedia</p>
+        <Image src="/main/icon.webp" height={220} width={220} alt="animepedia-icon" />
+        <div className="flex items-center justify-center flex-col">
+          <p className="font-extrabold md:ml-8 text-4xl md:text-7xl tracking-tighter">Animepedia</p>
+          <div className="flex justify-center items-center w-64 bg-indigo-900 py-2 rounded-lg mt-4 cursor-pointer">
+            <HiOutlineDocumentDownload className="text-white font-bold text-xl" />
+            <p className="ml-4 font-extrabold text-white tracking-tight">Download all data (.pdf)</p>
+          </div>
+        </div>
       </div>
       <div className="flex flex-wrap justify-center items-center">
         {isLoading
@@ -43,7 +53,6 @@ const Home = () => {
                 title={item.title}
               />
             ))}
-
         <div className="w-1/2 flex items-center justify-center my-12">
           <div className="cursor-pointer px-4 py-2 lg:px-12 lg:py-4 rounded-lg shadow-lg bg-gray-700" onClick={onPreviousPage}>
             <p className="text-white font-bold">Prev</p>

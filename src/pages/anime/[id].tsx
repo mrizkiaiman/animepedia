@@ -6,6 +6,7 @@ import Image from 'next/image'
 import Head from 'next/head'
 import { PageLoader } from '@components/page-loader'
 import { HiOutlinePrinter } from 'react-icons/hi'
+import { ErrorPage } from '@components/error-page'
 
 const Info = (props: { title: string; value: string | number }) => (
   <p className="text-gray-500">
@@ -24,7 +25,7 @@ export const AnimeDetail = () => {
   const { id, action } = router.query
   const animeId = id as string
 
-  const { data, isLoading } = useAnimeDetail(animeId)
+  const { data, isLoading, isError, error } = useAnimeDetail(animeId)
   const animeData = data?.data
   const image = data?.data.images.webp?.large_image_url || data?.data.images.jpg.large_image_url
   const title = data?.data.title
@@ -33,16 +34,20 @@ export const AnimeDetail = () => {
   const enablePrint = Boolean(action === 'print' && isLoading === false && isImageLoaded === true)
   const printURLpath = router.asPath.includes('print') ? '' : `${router.asPath}/?action=print`
 
+  const pageTitle = isLoading ? 'Loading . . .' : `${title} - Animepedia`
+
   React.useEffect(() => {
     if (enablePrint) window.print()
   }, [isLoading, isImageLoaded])
+
+  if (isError) return <ErrorPage message={error.message} />
 
   return isLoading ? (
     <PageLoader />
   ) : (
     <>
       <Head>
-        <title>{title} - Animepedia</title>
+        <title>{pageTitle}</title>
       </Head>
       <div className="flex flex-col md:flex-row justift-center items-center py-12">
         <div>
