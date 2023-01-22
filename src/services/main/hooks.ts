@@ -7,5 +7,9 @@ export const useAnimeList = (page: number) => {
 }
 
 export const useAnimeDetail = (id: string) => {
-  return useQuery(animeKeys.detail(id), () => getAnimeDetail(id))
+  return useQuery({
+    queryKey: animeKeys.detail(id),
+    queryFn: () => getAnimeDetail(id),
+    enabled: !!id,
+  })
 }
