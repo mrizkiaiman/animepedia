@@ -23,6 +23,6 @@ export const MAIN_TOOLS = [
     value: 'TailwindCSS - UI Styling',
   },
   {
-    value: 'Framer Motion - Animation Library',
+    value: 'Framer Motion - Animation',
   },
 ]

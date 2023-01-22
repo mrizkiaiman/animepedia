@@ -7,7 +7,13 @@ module.exports = {
         112: '28rem',
         128: '32rem',
       },
+      colors: {
+        gray: {
+          950: '#0E141B',
+        },
+      },
     },
   },
   plugins: [require('@tailwindcss/line-clamp')],
+  darkMode: 'class',
 }

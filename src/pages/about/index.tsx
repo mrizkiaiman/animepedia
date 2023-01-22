@@ -19,7 +19,7 @@ const About = () => {
             Provides the most complete anime database for your needs
           </p>
         </div>
-        <Image src="/about/mascot.webp" width={600} height={600} alt="animepedia-mascot" />
+        <Image src="/about/mascot.webp" width={600} height={600} alt="animepedia-mascot" priority />
       </div>
       <div className="mt-12">
         <p className="text-2xl font-extrabold tracking-tighter underline">Built with:</p>

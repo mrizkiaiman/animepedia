@@ -14,9 +14,10 @@ interface AnimeCardProps {
 
 export const AnimeCard: React.FC<AnimeCardProps> = ({ score, title, img, synopsis, episodes, rating, id }) => {
   const animeURLDetail = `/anime/${id}`
+
   return (
     <Link href={animeURLDetail}>
-      <div className="rounded-lg flex flex-col lg:flex-row items-center justify-between w-112 m-4 lg:m-8 shadow-lg p-6 cursor-pointer">
+      <div className="rounded-lg flex lg:h-56 h-112 flex-col lg:flex-row items-center justify-between w-112 m-4 lg:m-8 shadow-lg p-6 cursor-pointer">
         <Image className="rounded-lg" src={img} height={200} width={150} alt={`${title}-img`} />
         <div className="w-full lg:w-3/4 lg:ml-8 mt-4 lg:mt-0">
           <p className="font-bold text-s">{title}</p>

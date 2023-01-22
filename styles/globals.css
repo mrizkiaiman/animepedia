@@ -2,6 +2,10 @@
 @tailwind components;
 @tailwind utilities;
 
+.dark {
+  @apply bg-gray-950 text-gray-50;
+}
+
 /*
   1. Use a more-intuitive box-sizing model.
 */

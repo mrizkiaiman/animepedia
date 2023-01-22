@@ -3,6 +3,7 @@ import { useRouter } from 'next/router'
 import { useAnimeDetail } from '@app/services/main/hooks'
 
 import Image from 'next/image'
+import { PageLoader } from '@components/page-loader'
 import { HiOutlinePrinter } from 'react-icons/hi'
 
 const Info = (props: { title: string; value: string | number }) => (
@@ -22,12 +23,14 @@ export const AnimeDetail = () => {
   const { id } = router.query
   const animeId = id as string
 
-  const { data } = useAnimeDetail(animeId)
+  const { data, isLoading } = useAnimeDetail(animeId)
   const animeData = data?.data
   const image = data?.data.images.webp?.large_image_url || data?.data.images.jpg.large_image_url
   const title = data?.data.title
 
-  return (
+  return isLoading ? (
+    <PageLoader />
+  ) : (
     <>
       <div className="flex flex-col lg:flex-row justift-center items-center py-12">
         <div>

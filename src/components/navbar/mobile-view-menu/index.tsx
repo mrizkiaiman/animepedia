@@ -25,8 +25,8 @@ export const MobileViewMenu = () => {
               leaveTo="transform opacity-0 scale-95">
               <Popover.Panel className="mt-4 w-56 origin-top-right divide-y divide-gray-100 rounded-md bg-white dark:bg-gray-600 shadow-lg ring-1 ring-black ring-opacity-5 focus:outline-none">
                 {NAVBAR_MENU.map((item, index) => (
-                  <Link href={item.url}>
-                    <div key={item.title} className="px-6 py-4">
+                  <Link key={item.title} href={item.url}>
+                    <div className="px-6 py-4">
                       <p>{item.title}</p>
                     </div>
                   </Link>
