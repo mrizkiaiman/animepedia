@@ -8,12 +8,16 @@
     "start": "next start"
   },
   "dependencies": {
+    "@headlessui/react": "^1.7.7",
+    "@tailwindcss/line-clamp": "^0.4.2",
     "@tanstack/react-query": "^4.22.3",
+    "@tanstack/react-query-devtools": "^4.22.3",
     "axios": "^1.2.3",
     "framer-motion": "^8.5.0",
     "next": "^10.2.3",
     "react": "17.0.2",
-    "react-dom": "17.0.2"
+    "react-dom": "17.0.2",
+    "react-icons": "^4.7.1"
   },
   "devDependencies": {
     "@types/react": "^17.0.2",
