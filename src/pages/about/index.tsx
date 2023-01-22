@@ -1,7 +1,9 @@
 import * as React from 'react'
 import { MAIN_TOOLS } from '@app/constants'
+import { ABOUT } from '@app/constants/seo'
 
 import Image from 'next/image'
+import { SEO } from '@components-wrapper/seo'
 
 const Info = (props: { value: string }) => (
   <li>
@@ -12,6 +14,7 @@ const Info = (props: { value: string }) => (
 const About = () => {
   return (
     <div>
+      <SEO {...ABOUT} />
       <div className="flex items-center justify-center flex-col lg:flex-row">
         <div className="w-full lg:w-1/2 mb-12">
           <p className="text-center lg:text-left text-4xl lg:text-7xl font-extrabold tracking-tighter">Animepedia</p>
@@ -25,7 +28,7 @@ const About = () => {
         <p className="text-2xl font-extrabold tracking-tighter underline">Built with:</p>
         <div className="pt-4">
           <ul className="list-disc pl-6">
-            {MAIN_TOOLS.map((item, index) => (
+            {MAIN_TOOLS.map(item => (
               <Info key={item.value} value={item.value} />
             ))}
           </ul>

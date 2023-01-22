@@ -3,6 +3,7 @@ import { useRouter } from 'next/router'
 import { useAnimeDetail } from '@app/services/main/hooks'
 
 import Image from 'next/image'
+import Head from 'next/head'
 import { PageLoader } from '@components/page-loader'
 import { HiOutlinePrinter } from 'react-icons/hi'
 
@@ -40,6 +41,9 @@ export const AnimeDetail = () => {
     <PageLoader />
   ) : (
     <>
+      <Head>
+        <title>{title} - Animepedia</title>
+      </Head>
       <div className="flex flex-col md:flex-row justift-center items-center py-12">
         <div>
           {image && (

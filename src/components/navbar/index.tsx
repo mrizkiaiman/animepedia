@@ -1,10 +1,9 @@
 import * as React from 'react'
 import { NAVBAR_MENU } from '@app/constants'
 
-import { NavbarButtonMotion } from '@animations/NavbarButtonMotion'
+import { NavbarButtonMotion } from '@app/components-wrapper/animations/NavbarButtonMotion'
 
-import { FaMoon } from 'react-icons/fa'
-import { FaSun } from 'react-icons/fa'
+import Image from 'next/image'
 import { MobileViewMenu } from '@app/components/navbar/mobile-view-menu'
 import Link from 'next/link'
 
@@ -26,9 +25,11 @@ export const Navbar = () => {
               </NavbarButtonMotion>
             ))}
           </div>
-          <div className="z-10 block items-center mb-6 md:mb-0">
-            <FaSun className="cursor-pointer text-xl" />
-          </div>
+          <a href="https://mrizkiaiman.com" target="_blank" rel="noopener noreferrer">
+            <div className="z-10 block items-center">
+              <Image src="/main/avatar-head-only.webp" alt="animepedia-icon" height={35} width={35} />
+            </div>
+          </a>
         </div>
       </div>
     </div>

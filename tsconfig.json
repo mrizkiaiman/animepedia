@@ -17,8 +17,9 @@
     "baseUrl": "./",
     "paths": {
       "@app/*": ["src/*"],
-      "@animations/*": ["src/animations/*"],
+      "@animations/*": ["src/components-wrapper/animations/*"],
       "@components/*": ["src/components/*"],
+      "@components-wrapper/*": ["src/components-wrapper/*"],
       "@constants/*": ["src/constants/*"],
       "@pages/*": ["src/pages/*"],
       "@types/*": ["src/types/*"],
