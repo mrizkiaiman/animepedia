@@ -12,7 +12,7 @@
 - Export data in a page to .pdf file
 - Print information component from anime detail page
 
-## Main stack
+## Main tools
 ---
 - **ReactJS**
 - **NextJS**
