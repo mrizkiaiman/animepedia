@@ -1,6 +1,6 @@
-## Demo
+### Demo: **[animepedia.mrizkiaiman.com](https://animepedia.mrizkiaiman.com)**
 ---
-**[animepedia.mrizkiaiman.com](https://animepedia.mrizkiaiman.com)**
+<img width="1406" alt="Screen Shot 2023-01-23 at 17 06 40" src="https://user-images.githubusercontent.com/53157683/214013462-012e2d64-d5de-4cd7-8bf9-000c0e091d5b.png">
 
 ## What is Animepedia?
 ---
@@ -11,6 +11,7 @@
 - Provide simple anime information
 - Export data in a page to .pdf file
 - Print information component from anime detail page
+
 ## Main stack
 ---
 - **ReactJS**
