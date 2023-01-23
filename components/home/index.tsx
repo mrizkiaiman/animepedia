@@ -45,7 +45,7 @@ const Home = () => {
 
       {didInit && (
         <PDFDownloadLink document={<PDFDocument data={filteredDoc} page={page} />} fileName={`animepedia-page-${page}`}>
-          <div className="fixed shadow-lg bottom-6 md:bottom-12 right-6 md:right-14 flex justify-center items-center bg-indigo-900 py-3 w-44 rounded-lg cursor-pointer">
+          <div className="z-20 fixed shadow-lg bottom-6 md:bottom-12 right-6 md:right-14 flex justify-center items-center bg-indigo-900 py-3 w-44 rounded-lg cursor-pointer">
             <HiOutlineDocumentDownload className="text-white font-bold text-2xl" />
             <p className="font-bold text-white tracking-tight ml-2">Export to PDF</p>
           </div>
