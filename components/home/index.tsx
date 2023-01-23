@@ -11,6 +11,7 @@ import { AnimeCardLoader } from '@app/components/anime-card/loader'
 import { SEO } from '@components-wrapper/seo'
 import { HiOutlineDocumentDownload } from 'react-icons/hi'
 import { ErrorPage } from '@components/error-page'
+import { PaginationButtonMotion } from '@app/components-wrapper/animations/buttons/Pagination'
 
 const Home = () => {
   const skeletonLoader = Array(12).fill('-')
@@ -21,12 +22,17 @@ const Home = () => {
   const list = data?.data || []
   const filteredDoc = React.useMemo(() => filterToPDFdoc(list), [list])
 
-  const onPreviousPage = () =>
+  const onPreviousPage = () => {
     setPage(page => {
       if (page > 1) return page - 1
       else return page
     })
-  const onNextPage = () => setPage(page => page + 1)
+    window.scrollTo(0, 0)
+  }
+  const onNextPage = () => {
+    setPage(page => page + 1)
+    window.scrollTo(0, 0)
+  }
 
   React.useEffect(() => {
     if (!didInit) setDidInit(true)
@@ -44,7 +50,7 @@ const Home = () => {
       )} */}
       {didInit && (
         <PDFDownloadLink document={<PDFDocument data={filteredDoc} page={page} />} fileName={`animepedia-page-${page}`}>
-          <button className="z-20 fixed shadow-lg bottom-6 md:bottom-12 right-6 md:right-14 flex justify-center items-center bg-indigo-900 py-3 w-44 rounded-lg cursor-pointer">
+          <button className="transition ease-in-out hover:bg-yellow-500 duration-150 z-20 fixed shadow-lg bottom-6 md:bottom-12 right-6 md:right-14 flex justify-center items-center bg-indigo-900 py-3 w-44 rounded-lg cursor-pointer">
             <HiOutlineDocumentDownload className="text-white font-bold text-2xl" />
             <p className="font-bold text-white tracking-tight ml-2">Export to PDF</p>
           </button>
@@ -67,13 +73,17 @@ const Home = () => {
               />
             ))}
         <div className="w-1/2 flex items-center justify-center my-12">
-          <div className="cursor-pointer px-4 py-2 lg:px-12 lg:py-4 rounded-lg shadow-lg bg-gray-700" onClick={onPreviousPage}>
-            <p className="text-white font-bold">Prev</p>
-          </div>
+          <PaginationButtonMotion>
+            <button className="cursor-pointer px-4 py-2 lg:px-12 lg:py-4 rounded-lg shadow-lg bg-gray-700" onClick={onPreviousPage}>
+              <p className="text-white font-bold">Prev</p>
+            </button>
+          </PaginationButtonMotion>
           <p className="px-8 lg:px-24 text-lg lg:text-2xl font-bold">{page}</p>
-          <div className="cursor-pointer px-4 py-2 lg:px-12 lg:py-4 rounded-lg shadow-lg bg-gray-700" onClick={onNextPage}>
-            <p className="text-white font-bold">Next</p>
-          </div>
+          <PaginationButtonMotion>
+            <button className="cursor-pointer px-4 py-2 lg:px-12 lg:py-4 rounded-lg shadow-lg bg-gray-700" onClick={onNextPage}>
+              <p className="text-white font-bold">Next</p>
+            </button>
+          </PaginationButtonMotion>
         </div>
       </div>
     </>

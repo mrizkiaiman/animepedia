@@ -1,7 +1,7 @@
 import * as React from 'react'
 import { NAVBAR_MENU } from '@app/constants'
 
-import { NavbarButtonMotion } from '@app/components-wrapper/animations/NavbarButtonMotion'
+import { NavbarButtonMotion } from '@app/components-wrapper/animations/buttons/Navbar'
 
 import Image from 'next/image'
 import { MobileViewMenu } from '@app/components/navbar/mobile-view-menu'

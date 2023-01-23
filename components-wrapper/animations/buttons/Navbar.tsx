@@ -3,7 +3,7 @@ import { motion } from 'framer-motion'
 
 interface NavbarButtonMotionProps extends WithChildren {
   whileHoverScale?: number
-  whileTapScale?: number
+  whileTapScale?: number | undefined
 }
 
 export const NavbarButtonMotion: React.FC<NavbarButtonMotionProps> = ({ children, whileHoverScale, whileTapScale }) => {
