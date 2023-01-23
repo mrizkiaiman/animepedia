@@ -1,0 +1,33 @@
+{
+  "name": "my-app",
+  "version": "0.1.0",
+  "private": true,
+  "scripts": {
+    "dev": "next dev",
+    "build": "next build",
+    "start": "next start"
+  },
+  "dependencies": {
+    "@david.kucsai/react-pdf-table": "^0.4.1",
+    "@headlessui/react": "^1.7.7",
+    "@react-pdf/renderer": "^3.0.3",
+    "@tailwindcss/line-clamp": "^0.4.2",
+    "@tanstack/react-query": "^4.22.3",
+    "@tanstack/react-query-devtools": "^4.22.3",
+    "axios": "^1.2.3",
+    "framer-motion": "^5.6.0",
+    "next": "^10.2.3",
+    "react": "17.0.2",
+    "react-dom": "17.0.2",
+    "react-icons": "^4.7.1",
+    "react-lottie-loader": "^1.0.0",
+    "react-to-print": "^2.14.11"
+  },
+  "devDependencies": {
+    "@types/react": "^17.0.2",
+    "autoprefixer": "^10.4.13",
+    "postcss": "^8.4.21",
+    "tailwindcss": "^2.2.19",
+    "typescript": "4.9.4"
+  }
+}
