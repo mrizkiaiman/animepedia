@@ -1,6 +1,6 @@
 import * as React from 'react'
 
-import { Page, Text, View, Document, StyleSheet, Image } from '@react-pdf/renderer'
+import { Page, Text, View, Document, StyleSheet, Image, Link } from '@react-pdf/renderer'
 import { Table, TableHeader, TableCell, TableBody, DataTableCell } from '@david.kucsai/react-pdf-table'
 import { Banner } from '@app/components/banner'
 
@@ -16,10 +16,13 @@ export const PDFDocument: React.FC<{ data: Array<PDFDocumentProps>; page?: numbe
   <Document>
     <Page size="A4" style={styles.container}>
       <View style={styles.banner}>
-        <Image style={{ height: 120, width: 140 }} src="/main/icon.png" />
+        <Image style={{ height: 120, width: 160 }} src="/main/icon.png" />
         <View style={{ justifyContent: 'center', alignItems: 'center', marginLeft: 16 }}>
-          <Text style={{ fontSize: 32, fontWeight: 'bold' }}>Animepedia</Text>
-          <Text>Page {page || '-'}</Text>
+          <Text style={{ fontSize: 32, fontWeight: 'extrabold' }}>Animepedia</Text>
+          <Text style={{ fontSize: 10, marginBottom: 2 }}>
+            <Link src="https://animepedia.mrizkiaiman.com">animepedia.mrizkiaiman.com</Link>
+          </Text>
+          <Text style={{ fontSize: 10 }}>Page {page || '-'}</Text>
         </View>
       </View>
       <View style={styles.tableContainer}>
@@ -62,6 +65,8 @@ const styles = StyleSheet.create({
     flexDirection: 'row',
     justifyContent: 'center',
     alignItems: 'center',
+    marginTop: 64,
+    marginBottom: 32,
   },
   tableContainer: {
     padding: 12,
