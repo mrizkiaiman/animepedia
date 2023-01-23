@@ -16,15 +16,15 @@
     "incremental": true,
     "baseUrl": "./",
     "paths": {
-      "@app/*": ["src/*"],
-      "@animations/*": ["src/components-wrapper/animations/*"],
-      "@components/*": ["src/components/*"],
-      "@components-wrapper/*": ["src/components-wrapper/*"],
-      "@constants/*": ["src/constants/*"],
-      "@pages/*": ["src/pages/*"],
-      "@types/*": ["src/types/*"],
-      "@utils/*": ["src/utils/*"],
-      "@hooks/*": ["src/utils/hooks/*"]
+      "@app/*": ["*"],
+      "@animations/*": ["components-wrapper/animations/*"],
+      "@components/*": ["components/*"],
+      "@components-wrapper/*": ["components-wrapper/*"],
+      "@constants/*": ["constants/*"],
+      "@pages/*": ["pages/*"],
+      "@types/*": ["types/*"],
+      "@utils/*": ["utils/*"],
+      "@hooks/*": ["utils/hooks/*"]
     }
   },
   "include": ["next-env.d.ts", "**/*.ts", "**/*.tsx", "src/components/anime-card/loader"],

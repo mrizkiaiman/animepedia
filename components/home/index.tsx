@@ -1,7 +1,7 @@
 import * as React from 'react'
 import { useAnimeList } from '@app/services/main/hooks'
 import { HOME } from '@app/constants/seo'
-import { filterToPDFdoc } from '@app/utils/filterToPDFdoc'
+import { filterToPDFdoc } from 'utils/filterToPDFdoc'
 import { PDFDownloadLink, PDFViewer } from '@react-pdf/renderer'
 import { PDFDocument } from '@components/pdf'
 
