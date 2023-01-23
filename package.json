@@ -1,11 +1,11 @@
 {
-  "name": "my-app",
+  "name": "animepedia",
   "version": "0.1.0",
   "private": true,
   "scripts": {
     "dev": "next dev",
     "build": "next build",
-    "start": "next start"
+    "start": "cross-env NODE_OPTIONS='--openssl-legacy-provider --inspect' next dev"
   },
   "dependencies": {
     "@david.kucsai/react-pdf-table": "^0.4.1",
