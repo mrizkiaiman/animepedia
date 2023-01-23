@@ -1,11 +1,11 @@
 import * as React from 'react'
 import { useAnimeList } from '@app/services/main/hooks'
 import { HOME } from '@app/constants/seo'
-import { exportToPDF } from '@app/utils/exportToPDF'
-import { PDFDownloadLink } from '@react-pdf/renderer'
+import { filterToPDFdoc } from '@app/utils/filterToPDFdoc'
+import { PDFDownloadLink, PDFViewer } from '@react-pdf/renderer'
 import { PDFDocument } from '@components/pdf'
 
-import Image from 'next/image'
+import { Banner } from '@app/components/banner'
 import { AnimeCard } from '@components/anime-card'
 import { AnimeCardLoader } from '@app/components/anime-card/loader'
 import { SEO } from '@components-wrapper/seo'
@@ -19,7 +19,7 @@ const Home = () => {
 
   const { data, isLoading, error, isError } = useAnimeList(page)
   const list = data?.data || []
-  const filteredDoc = React.useMemo(() => exportToPDF(list), [list])
+  const filteredDoc = React.useMemo(() => filterToPDFdoc(list), [list])
 
   const onPreviousPage = () =>
     setPage(page => {
@@ -36,20 +36,22 @@ const Home = () => {
   return (
     <>
       <SEO {...HOME} />
-      <div className="flex flex-col md:flex-row justify-center items-center pb-12">
-        <Image src="/main/icon.webp" height={220} width={220} alt="animepedia-icon" />
-        <div className="flex items-center justify-center flex-col">
-          <p className="font-extrabold md:ml-8 text-4xl md:text-7xl tracking-tighter">Animepedia</p>
-        </div>
-      </div>
+      <Banner />
+      {/* {didInit && (
+        <PDFViewer>
+          <PDFDocument data={filteredDoc} page={page} />
+        </PDFViewer>
+      )} */}
+
       {didInit && (
-        <PDFDownloadLink document={<PDFDocument data={filteredDoc} />} fileName="resume.pdf">
-          <div className="flex justify-center items-center w-40 bg-indigo-900 py-3 rounded-lg cursor-pointer ml-8">
+        <PDFDownloadLink document={<PDFDocument data={filteredDoc} page={page} />} fileName={`animepedia-page-${page}`}>
+          <div className="fixed shadow-lg bottom-6 md:bottom-12 right-6 md:right-14 flex justify-center items-center bg-indigo-900 py-3 w-44 rounded-lg cursor-pointer">
             <HiOutlineDocumentDownload className="text-white font-bold text-2xl" />
-            <p className="ml-2 font-bold text-white tracking-tight">Export to PDF</p>
+            <p className="font-bold text-white tracking-tight ml-2">Export to PDF</p>
           </div>
         </PDFDownloadLink>
       )}
+
       <div className="flex flex-wrap justify-center items-center">
         {isLoading
           ? skeletonLoader.map((_, index) => <AnimeCardLoader key={index} />)

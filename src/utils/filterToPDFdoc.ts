@@ -1,7 +1,7 @@
 import { Anime } from '@app/types/jikanAPI/anime'
 import { PDFDocumentProps } from '@app/components/pdf'
 
-export const exportToPDF = (data: Anime[]) => {
+export const filterToPDFdoc = (data: Anime[]) => {
   let result: Array<PDFDocumentProps> = data.map((item, index) => {
     return {
       number: index + 1,
