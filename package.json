@@ -3,9 +3,9 @@
   "version": "0.1.0",
   "private": true,
   "scripts": {
-    "dev": "next dev",
-    "build": "next build",
-    "start": "cross-env NODE_OPTIONS='--openssl-legacy-provider --inspect' next dev"
+    "dev": "export NODE_OPTIONS=--openssl-legacy-provider; next dev",
+    "build": "export NODE_OPTIONS=--openssl-legacy-provider; next build",
+    "start": "export NODE_OPTIONS=--openssl-legacy-provider; next dev"
   },
   "dependencies": {
     "@david.kucsai/react-pdf-table": "^0.4.1",
