@@ -8,16 +8,18 @@
 ---
 - A simple web that provides anime information for your needs. It's using **[Jikan API v4](https://docs.api.jikan.moe/)** as data source.
 
+## Pages
+---
+- **[Anime](https://animepedia.mrizkiaiman.com) (Pagination list)**
+- **[YGO Cards](https://animepedia.mrizkiaiman.com/ygo-cards) (100+ item list)**
+
+
 ## Features
 ---
 - Provide simple anime & some ygo cards information
 - Export data in a page to `.pdf` file
 - Print information component from anime & ygo card detail page
 
-## Pages
----
-- **[Anime](https://animepedia.mrizkiaiman.com)** - Pagination list
-- **[YGO Card](https://animepedia.mrizkiaiman.com/ygo-cards)** - 100+ item list
 
 ## Main tools
 ---
