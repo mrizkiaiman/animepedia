@@ -1,0 +1,15 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Detail page If app renders detail page correctly 1`] = `
+<div
+  className="h-full w-full flex justify-center items-center"
+>
+  <div
+    className="w-112 h-112 pt-24"
+  >
+    <div
+      className=""
+    />
+  </div>
+</div>
+`;

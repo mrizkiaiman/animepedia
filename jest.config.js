@@ -12,6 +12,7 @@ module.exports = {
     '!<rootDir>/coverage/**',
   ],
   setupFiles: [`<rootDir>/jest-shim.js`],
+  setupFilesAfterEnv: ['jest-canvas-mock'],
   moduleNameMapper: {
     // Handle CSS imports (without CSS modules)
     '^.+\\.(css|sass|scss)$': '<rootDir>/__mocks__/styleMock.js',

@@ -1,10 +1,12 @@
 import React from 'react'
 import { QueryClient, QueryClientProvider } from '@tanstack/react-query'
+import { fireEvent, screen } from '@testing-library/react'
 
 import renderer from 'react-test-renderer'
 import Home from './index'
 
 //Mocking
+const queryPage = 1
 const queryClient = new QueryClient()
 const useRouter = jest.spyOn(require('next/router'), 'useRouter')
 jest.mock('@react-pdf/renderer', () => {
@@ -25,10 +27,25 @@ describe('Home page', () => {
     const HomePage = renderer
       .create(
         <QueryClientProvider client={queryClient}>
-          <Home />
+          <Home queryPage={queryPage} />
         </QueryClientProvider>,
       )
       .toJSON()
     expect(HomePage).toMatchSnapshot()
+  })
+
+  test('If export PDF button renders correctly', () => {
+    const ExportPDFButton = screen.queryByTestId('export-pdf-button')
+    expect(ExportPDFButton).toBeDefined()
+  })
+
+  test('If next page button renders correctly', () => {
+    const NextPageButton = screen.queryByTestId('next-page-button')
+    expect(NextPageButton).toBeDefined()
+  })
+
+  test('If prev page button renders correctly', () => {
+    const PrevPageButton = screen.queryByTestId('prev-page-button')
+    expect(PrevPageButton).toBeDefined()
   })
 })

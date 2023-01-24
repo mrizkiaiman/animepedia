@@ -1,0 +1,135 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`About page If app renders about page correctly 1`] = `
+<div>
+  <div
+    className="flex items-center justify-center flex-col lg:flex-row"
+  >
+    <div
+      className="w-full lg:w-1/2 mb-12"
+    >
+      <p
+        className="text-center lg:text-left text-4xl lg:text-7xl font-extrabold tracking-tighter"
+      >
+        Animepedia
+      </p>
+      <p
+        className="text-center lg:text-left text-xl lg:text-3xl font-bold tracking-tighter mt-6"
+      >
+        Provides the most complete anime database for your needs
+      </p>
+    </div>
+    <div
+      style={
+        {
+          "boxSizing": "border-box",
+          "display": "inline-block",
+          "margin": 0,
+          "maxWidth": "100%",
+          "overflow": "hidden",
+          "position": "relative",
+        }
+      }
+    >
+      <div
+        style={
+          {
+            "boxSizing": "border-box",
+            "display": "block",
+            "maxWidth": "100%",
+          }
+        }
+      >
+        <img
+          alt=""
+          aria-hidden={true}
+          role="presentation"
+          src="data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iNjAwIiBoZWlnaHQ9IjYwMCIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIiB2ZXJzaW9uPSIxLjEiLz4="
+          style={
+            {
+              "border": "none",
+              "display": "block",
+              "margin": 0,
+              "maxWidth": "100%",
+              "padding": 0,
+            }
+          }
+        />
+      </div>
+      <img
+        alt="animepedia-mascot"
+        decoding="async"
+        src="/_next/image?url=%2Fabout%2Fmascot.webp&w=1200&q=75"
+        srcSet="/_next/image?url=%2Fabout%2Fmascot.webp&w=640&q=75 1x, /_next/image?url=%2Fabout%2Fmascot.webp&w=1200&q=75 2x"
+        style={
+          {
+            "border": "none",
+            "bottom": 0,
+            "boxSizing": "border-box",
+            "display": "block",
+            "height": 0,
+            "left": 0,
+            "margin": "auto",
+            "maxHeight": "100%",
+            "maxWidth": "100%",
+            "minHeight": "100%",
+            "minWidth": "100%",
+            "objectFit": undefined,
+            "objectPosition": undefined,
+            "padding": 0,
+            "position": "absolute",
+            "right": 0,
+            "top": 0,
+            "width": 0,
+          }
+        }
+      />
+    </div>
+  </div>
+  <div
+    className="mt-12"
+  >
+    <p
+      className="text-2xl font-extrabold tracking-tighter underline"
+    >
+      Built with:
+    </p>
+    <div
+      className="pt-4"
+    >
+      <ul
+        className="list-disc pl-6"
+      >
+        <li>
+          <p
+            className="font-semibold"
+          >
+            NextJS - ReactJS Framework
+          </p>
+        </li>
+        <li>
+          <p
+            className="font-semibold"
+          >
+            TypeScript - JavaScript Superset
+          </p>
+        </li>
+        <li>
+          <p
+            className="font-semibold"
+          >
+            @tanstack/query - Client-side API Management
+          </p>
+        </li>
+        <li>
+          <p
+            className="font-semibold"
+          >
+            TailwindCSS - UI Styling
+          </p>
+        </li>
+      </ul>
+    </div>
+  </div>
+</div>
+`;

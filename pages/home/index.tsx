@@ -1,9 +1,9 @@
 import * as React from 'react'
-import { GetServerSideProps } from 'next'
 import { useAnimeList } from '@services/main/hooks'
 import { HOME } from '@constants/seo'
 import { filterToPDFdoc } from '@utils/filterToPDFdoc'
 import { useRouter } from 'next/router'
+import { motion } from 'framer-motion'
 
 import { Banner } from '@app/components/banner'
 import { AnimeCard } from '@components/anime-card'
@@ -11,7 +11,6 @@ import { AnimeCardLoader } from '@app/components/anime-card/loader'
 import { SEO } from '@components-wrapper/seo'
 import { HiOutlineDocumentDownload } from 'react-icons/hi'
 import { ErrorPage } from '@components/error-page'
-import { PaginationButtonMotion } from '@app/components-wrapper/animations/buttons/Pagination'
 import { PDFDownloadLink } from '@react-pdf/renderer'
 import { PDFDocument } from '@components/pdf'
 
@@ -59,7 +58,10 @@ export const Home: React.FC<HomeProps> = ({ queryPage }) => {
         </PDFViewer>
       )} */}
       {didInit && (
-        <PDFDownloadLink document={<PDFDocument data={filteredDoc} page={page} />} fileName={`animepedia-page-${page}`}>
+        <PDFDownloadLink
+          data-testid="export-pdf-button"
+          document={<PDFDocument data={filteredDoc} page={page} />}
+          fileName={`animepedia-page-${page}`}>
           <button className="transition ease-in-out hover:bg-yellow-500 duration-150 z-20 fixed shadow-lg bottom-6 md:bottom-12 right-6 md:right-14 flex justify-center items-center bg-indigo-900 py-3 w-44 rounded-lg cursor-pointer">
             <HiOutlineDocumentDownload className="text-white font-bold text-2xl" />
             <p className="font-bold text-white tracking-tight ml-2">Export to PDF</p>
@@ -83,27 +85,21 @@ export const Home: React.FC<HomeProps> = ({ queryPage }) => {
               />
             ))}
         <div className="w-1/2 flex items-center justify-center my-12">
-          <PaginationButtonMotion>
-            <div className="cursor-pointer px-4 py-2 lg:px-12 lg:py-4 rounded-lg shadow-lg bg-gray-700" onClick={onPreviousPage}>
+          <motion.button onClick={onPreviousPage} whileHover={{ scale: 1.1 }} transition={{ type: 'spring', stiffness: 200, damping: 10 }}>
+            <div data-testid="prev-page-button" className="cursor-pointer px-4 py-2 lg:px-12 lg:py-4 rounded-lg shadow-lg bg-gray-700">
               <p className="text-white font-bold">Prev</p>
             </div>
-          </PaginationButtonMotion>
+          </motion.button>
           <p className="px-8 lg:px-24 text-lg lg:text-2xl font-bold">{page}</p>
-          <PaginationButtonMotion>
-            <div className="cursor-pointer px-4 py-2 lg:px-12 lg:py-4 rounded-lg shadow-lg bg-gray-700" onClick={onNextPage}>
+          <motion.button onClick={onNextPage} whileHover={{ scale: 1.1 }} transition={{ type: 'spring', stiffness: 200, damping: 10 }}>
+            <div data-testid="next-page-button" className="cursor-pointer px-4 py-2 lg:px-12 lg:py-4 rounded-lg shadow-lg bg-gray-700">
               <p className="text-white font-bold">Next</p>
             </div>
-          </PaginationButtonMotion>
+          </motion.button>
         </div>
       </div>
     </>
   )
-}
-
-export const getServerSideProps: GetServerSideProps = async context => {
-  const { pagewoi } = context.query
-
-  return { props: { pagewoi } }
 }
 
 export default Home
