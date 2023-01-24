@@ -11,7 +11,7 @@ const nextConfig = {
   },
   reactStrictMode: true,
   images: {
-    domains: ['cdn.myanimelist.net'],
+    domains: ['cdn.myanimelist.net', 'images.ygoprodeck.com'],
     formats: ['image/avif', 'image/webp'],
   },
 }

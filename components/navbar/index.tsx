@@ -24,6 +24,14 @@ export const Navbar = () => {
                 </Link>
               </NavbarButtonMotion>
             ))}
+            <NavbarButtonMotion>
+              <Link href={'/ygo-cards'}>
+                <p
+                  className={`font-extrabold italic bg-yellow-300 px-5 py-2 rounded-xl m-2 text-md hover:bg-gray-700 hover:font-bold hover:text-white hover:dark:bg-zinc-50 hover:dark:text-gray-800`}>
+                  New! 100+ YGO Cards
+                </p>
+              </Link>
+            </NavbarButtonMotion>
           </div>
           <a href="https://mrizkiaiman.com" target="_blank" rel="noopener noreferrer">
             <div className="z-10 block items-center">

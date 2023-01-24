@@ -1,7 +1,7 @@
 import * as React from 'react'
 import { useAnimeList } from '@services/main/hooks'
 import { HOME } from '@constants/seo'
-import { filterToPDFdoc } from '@utils/filterToPDFdoc'
+import { filterToPDFdocAnime } from '@utils/filterToPDFdoc'
 import { useRouter } from 'next/router'
 import { motion } from 'framer-motion'
 
@@ -12,7 +12,7 @@ import { SEO } from '@components-wrapper/seo'
 import { HiOutlineDocumentDownload } from 'react-icons/hi'
 import { ErrorPage } from '@components/error-page'
 import { PDFDownloadLink } from '@react-pdf/renderer'
-import { PDFDocument } from '@components/pdf'
+import { PDFDocumentAnime } from '@components/pdf'
 import { ExportPDFButtonLoader } from '@app/pages/home/loader'
 
 interface HomeProps {
@@ -28,7 +28,7 @@ export const Home: React.FC<HomeProps> = ({ queryPage }) => {
 
   const { data, isLoading, error, isError } = useAnimeList(page)
   const list = data?.data || []
-  const filteredDoc = React.useMemo(() => filterToPDFdoc(list), [list])
+  const filteredDoc = React.useMemo(() => filterToPDFdocAnime(list), [list])
 
   const onPreviousPage = () => {
     if (page > 1) {
@@ -55,7 +55,7 @@ export const Home: React.FC<HomeProps> = ({ queryPage }) => {
       <Banner />
       {/* {didInit && (
         <PDFViewer>
-          <PDFDocument data={filteredDoc} page={page} />
+          <PDFDocumentAnime data={filteredDoc} page={page} />
         </PDFViewer>
       )} */}
       {didInit ? (
@@ -64,7 +64,7 @@ export const Home: React.FC<HomeProps> = ({ queryPage }) => {
         ) : (
           <PDFDownloadLink
             data-testid="export-pdf-button"
-            document={<PDFDocument data={filteredDoc} page={page} />}
+            document={<PDFDocumentAnime data={filteredDoc} page={page} />}
             fileName={`animepedia-page-${page}`}>
             <button className="transition ease-in-out hover:bg-yellow-500 duration-150 z-20 fixed shadow-lg bottom-6 md:bottom-12 right-6 md:right-14 flex justify-center items-center bg-indigo-900 py-3 h-12 w-44 rounded-lg cursor-pointer">
               <HiOutlineDocumentDownload className="text-white font-bold text-2xl" />

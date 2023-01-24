@@ -2,9 +2,8 @@ import * as React from 'react'
 
 import { Page, Text, View, Document, StyleSheet, Image, Link } from '@react-pdf/renderer'
 import { Table, TableHeader, TableCell, TableBody, DataTableCell } from '@david.kucsai/react-pdf-table'
-import { Banner } from '@app/components/banner'
 
-export interface PDFDocumentProps {
+export interface PDFDocumentAnimeProps {
   number: number
   title: string
   score: number
@@ -12,7 +11,15 @@ export interface PDFDocumentProps {
   status: string
 }
 
-export const PDFDocument: React.FC<{ data: Array<PDFDocumentProps>; page?: number }> = ({ data, page }) => (
+export interface PDFDocumentYGOProps {
+  number: number
+  id: string
+  name: string
+  type: string
+  race: string
+}
+
+export const PDFDocumentAnime: React.FC<{ data: Array<PDFDocumentAnimeProps>; page?: number }> = ({ data, page }) => (
   <Document>
     <Page size="A4" style={styles.container}>
       <View style={styles.banner}>
@@ -57,6 +64,43 @@ export const PDFDocument: React.FC<{ data: Array<PDFDocumentProps>; page?: numbe
   </Document>
 )
 
+export const PDFDocumentYGO: React.FC<{ data: Array<PDFDocumentYGOProps>[] }> = ({ data }) => (
+  <Document>
+    <Page size="A4" style={styles.container}>
+      {data.map((item, index) => (
+        <View key={index} style={styles.tableContainer}>
+          <Table data={item}>
+            <TableHeader textAlign={'center'}>
+              <TableCell style={styles.tableCell} weighting={0.05}>
+                No
+              </TableCell>
+              <TableCell style={styles.tableCell} weighting={0.1}>
+                ID
+              </TableCell>
+              <TableCell style={styles.tableCell} weighting={0.5}>
+                Name
+              </TableCell>
+              <TableCell style={styles.tableCell} weighting={0.35}>
+                Type
+              </TableCell>
+              <TableCell style={styles.tableCell} weighting={0.1}>
+                Race
+              </TableCell>
+            </TableHeader>
+            <TableBody>
+              <DataTableCell weighting={0.05} style={styles.dataTableCell} getContent={r => r.number} />
+              <DataTableCell weighting={0.1} style={styles.dataTableCell} getContent={r => r.id} />
+              <DataTableCell weighting={0.5} style={styles.dataTableCell} getContent={r => r.name} />
+              <DataTableCell weighting={0.35} style={styles.dataTableCell} getContent={r => r.type} />
+              <DataTableCell weighting={0.1} style={styles.dataTableCell} getContent={r => r.race} />
+            </TableBody>
+          </Table>
+        </View>
+      ))}
+    </Page>
+  </Document>
+)
+
 const styles = StyleSheet.create({
   container: {
     backgroundColor: '#E4E4E4',
@@ -71,15 +115,17 @@ const styles = StyleSheet.create({
   tableContainer: {
     padding: 12,
     margin: 12,
+    marginTop: 24,
+    marginBottom: 24,
   },
   tableCell: {
     fontSize: 10,
   },
   dataTableCell: {
     textAlign: 'center',
-    fontSize: 10,
+    fontSize: 8,
     paddingVertical: 2,
   },
 })
 
-export default PDFDocument
+export default PDFDocumentAnime
