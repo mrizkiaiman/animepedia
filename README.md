@@ -9,22 +9,37 @@
 ## Features
 ---
 - Provide simple anime information
-- Export data in a page to .pdf file
+- Export data in a page to `.pdf` file
 - Print information component from anime detail page
 
 ## Main tools
 ---
-- **ReactJS**
-- **NextJS**
-- **TypeScript**
-- **TailwindCSS**
-- **@tanstack/query**
+- **`NextJS`**
+- **`TypeScript`**
+- **`TailwindCSS`**
+- **`@tanstack/query`**
 
 ## Run the app
 ---
-
-- Run this command on terminal
 ```
 npm install && npm start
 ```
+
+## Test coverage
+---
+Access the test coverage files at
+```
+*root*/__tests__
+```
+- `/home/HomePage.test.tsx`
+- `/about/AboutPage.test.tsx`
+- `/anime/DetailPage.test.tsx`
+
+## Run the test coverage
+---
+```
+npm test
+```
+
+
 

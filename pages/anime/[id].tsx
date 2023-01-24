@@ -45,10 +45,9 @@ export const AnimeDetail = () => {
       <Head>
         <title>{pageTitle}</title>
       </Head>
-
       <button
         onClick={onPrintDocument}
-        className="transition ease-in-out duration-150 z-20 fixed shadow-lg bottom-6 md:bottom-12 right-6 md:right-14 w-24 py-2 rounded-lg hover:bg-yellow-500 bg-pink-700 flex items-center justify-center cursor-pointer">
+        className="transition ease-in-out duration-150 z-20 fixed shadow-lg bottom-6 md:bottom-12 right-6 md:right-14 h-12 w-24 rounded-lg hover:bg-yellow-500 bg-pink-700 flex items-center justify-center cursor-pointer">
         <HiOutlinePrinter className="text-white text-xl" />
         <p className="ml-2 font-bold text-white">Print</p>
       </button>

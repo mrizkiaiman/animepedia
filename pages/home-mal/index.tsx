@@ -1,5 +1,5 @@
 import * as React from 'react'
-import { useAnimeList } from '@services/main/hooks'
+import { useAnimeListMAL } from '@services/main/hooks'
 import { HOME } from '@constants/seo'
 import { filterToPDFdoc } from '@utils/filterToPDFdoc'
 import { useRouter } from 'next/router'
@@ -26,23 +26,9 @@ export const Home: React.FC<HomeProps> = ({ queryPage }) => {
 
   const router = useRouter()
 
-  const { data, isLoading, error, isError } = useAnimeList(page)
+  const { data, isLoading, error, isError } = useAnimeListMAL()
   const list = data?.data || []
   const filteredDoc = React.useMemo(() => filterToPDFdoc(list), [list])
-
-  const onPreviousPage = () => {
-    if (page > 1) {
-      setPage(page - 1)
-      window.scrollTo({ top: 0, left: 0, behavior: 'smooth' })
-      router.push(`/?page=${page - 1}`, undefined, { shallow: true })
-    }
-  }
-
-  const onNextPage = () => {
-    setPage(page + 1)
-    window.scrollTo({ top: 0, left: 0, behavior: 'smooth' })
-    router.push(`/?page=${page + 1}`, undefined, { shallow: true })
-  }
 
   React.useEffect(() => {
     if (!didInit) setDidInit(true)
@@ -75,33 +61,7 @@ export const Home: React.FC<HomeProps> = ({ queryPage }) => {
       ) : null}
 
       <div className="flex flex-wrap justify-center items-center">
-        {isLoading
-          ? skeletonLoader.map((_, index) => <AnimeCardLoader key={index} />)
-          : list.map((item, index) => (
-              <AnimeCard
-                key={item.mal_id}
-                id={item.mal_id}
-                episodes={item.episodes}
-                img={item.images.webp?.image_url || item.images.jpg.image_url}
-                rating={item.rating}
-                score={item.score}
-                synopsis={item.synopsis}
-                title={item.title}
-              />
-            ))}
-        <div className="w-1/2 flex items-center justify-center my-12">
-          <motion.button onClick={onPreviousPage} whileHover={{ scale: 1.1 }} transition={{ type: 'spring', stiffness: 200, damping: 10 }}>
-            <div data-testid="prev-page-button" className="cursor-pointer px-4 py-2 lg:px-12 lg:py-4 rounded-lg shadow-lg bg-gray-700">
-              <p className="text-white font-bold">Prev</p>
-            </div>
-          </motion.button>
-          <p className="px-8 lg:px-24 text-lg lg:text-2xl font-bold">{page}</p>
-          <motion.button onClick={onNextPage} whileHover={{ scale: 1.1 }} transition={{ type: 'spring', stiffness: 200, damping: 10 }}>
-            <div data-testid="next-page-button" className="cursor-pointer px-4 py-2 lg:px-12 lg:py-4 rounded-lg shadow-lg bg-gray-700">
-              <p className="text-white font-bold">Next</p>
-            </div>
-          </motion.button>
-        </div>
+        {isLoading ? skeletonLoader.map((_, index) => <AnimeCardLoader key={index} />) : list.map((item, index) => <p>{item.title}</p>)}
       </div>
     </>
   )

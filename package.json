@@ -6,7 +6,7 @@
     "dev": "next dev",
     "build": "next build",
     "start": "next dev",
-    "test": "jest --watch"
+    "test": "jest --watchAll"
   },
   "dependencies": {
     "@david.kucsai/react-pdf-table": "^0.4.1",
