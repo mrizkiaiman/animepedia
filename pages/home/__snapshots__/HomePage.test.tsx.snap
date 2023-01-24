@@ -1,0 +1,571 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Home If app renders home page correctly 1`] = `
+[
+  <div
+    className="flex flex-col md:flex-row justify-center items-center pb-12"
+  >
+    <div
+      style={
+        {
+          "boxSizing": "border-box",
+          "display": "inline-block",
+          "margin": 0,
+          "maxWidth": "100%",
+          "overflow": "hidden",
+          "position": "relative",
+        }
+      }
+    >
+      <div
+        style={
+          {
+            "boxSizing": "border-box",
+            "display": "block",
+            "maxWidth": "100%",
+          }
+        }
+      >
+        <img
+          alt=""
+          aria-hidden={true}
+          role="presentation"
+          src="data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMjIwIiBoZWlnaHQ9IjIyMCIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIiB2ZXJzaW9uPSIxLjEiLz4="
+          style={
+            {
+              "border": "none",
+              "display": "block",
+              "margin": 0,
+              "maxWidth": "100%",
+              "padding": 0,
+            }
+          }
+        />
+      </div>
+      <noscript>
+        <img
+          alt="animepedia-icon"
+          decoding="async"
+          src="/main/icon.webp"
+          srcSet="/_next/image?url=%2Fmain%2Ficon.webp&w=256&q=75 1x, /_next/image?url=%2Fmain%2Ficon.webp&w=640&q=75 2x"
+          style={
+            {
+              "border": "none",
+              "bottom": 0,
+              "boxSizing": "border-box",
+              "display": "block",
+              "height": 0,
+              "left": 0,
+              "margin": "auto",
+              "maxHeight": "100%",
+              "maxWidth": "100%",
+              "minHeight": "100%",
+              "minWidth": "100%",
+              "objectFit": undefined,
+              "objectPosition": undefined,
+              "padding": 0,
+              "position": "absolute",
+              "right": 0,
+              "top": 0,
+              "width": 0,
+            }
+          }
+        />
+      </noscript>
+      <img
+        alt="animepedia-icon"
+        decoding="async"
+        src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7"
+        style={
+          {
+            "border": "none",
+            "bottom": 0,
+            "boxSizing": "border-box",
+            "display": "block",
+            "height": 0,
+            "left": 0,
+            "margin": "auto",
+            "maxHeight": "100%",
+            "maxWidth": "100%",
+            "minHeight": "100%",
+            "minWidth": "100%",
+            "objectFit": undefined,
+            "objectPosition": undefined,
+            "padding": 0,
+            "position": "absolute",
+            "right": 0,
+            "top": 0,
+            "width": 0,
+          }
+        }
+      />
+    </div>
+    <div
+      className="flex items-center justify-center flex-col"
+    >
+      <p
+        className="font-extrabold md:ml-8 text-4xl md:text-7xl tracking-tighter"
+      >
+        Animepedia
+      </p>
+    </div>
+  </div>,
+  <div
+    className="flex flex-wrap justify-center items-center"
+  >
+    <div
+      className="h-96 lg:h-56 animate-pulse rounded-lg flex flex-col lg:flex-row items-center justify-between w-112 m-4 lg:m-8 shadow-lg p-6 bg-gray-200"
+    />
+    <div
+      className="h-96 lg:h-56 animate-pulse rounded-lg flex flex-col lg:flex-row items-center justify-between w-112 m-4 lg:m-8 shadow-lg p-6 bg-gray-200"
+    />
+    <div
+      className="h-96 lg:h-56 animate-pulse rounded-lg flex flex-col lg:flex-row items-center justify-between w-112 m-4 lg:m-8 shadow-lg p-6 bg-gray-200"
+    />
+    <div
+      className="h-96 lg:h-56 animate-pulse rounded-lg flex flex-col lg:flex-row items-center justify-between w-112 m-4 lg:m-8 shadow-lg p-6 bg-gray-200"
+    />
+    <div
+      className="h-96 lg:h-56 animate-pulse rounded-lg flex flex-col lg:flex-row items-center justify-between w-112 m-4 lg:m-8 shadow-lg p-6 bg-gray-200"
+    />
+    <div
+      className="h-96 lg:h-56 animate-pulse rounded-lg flex flex-col lg:flex-row items-center justify-between w-112 m-4 lg:m-8 shadow-lg p-6 bg-gray-200"
+    />
+    <div
+      className="h-96 lg:h-56 animate-pulse rounded-lg flex flex-col lg:flex-row items-center justify-between w-112 m-4 lg:m-8 shadow-lg p-6 bg-gray-200"
+    />
+    <div
+      className="h-96 lg:h-56 animate-pulse rounded-lg flex flex-col lg:flex-row items-center justify-between w-112 m-4 lg:m-8 shadow-lg p-6 bg-gray-200"
+    />
+    <div
+      className="h-96 lg:h-56 animate-pulse rounded-lg flex flex-col lg:flex-row items-center justify-between w-112 m-4 lg:m-8 shadow-lg p-6 bg-gray-200"
+    />
+    <div
+      className="h-96 lg:h-56 animate-pulse rounded-lg flex flex-col lg:flex-row items-center justify-between w-112 m-4 lg:m-8 shadow-lg p-6 bg-gray-200"
+    />
+    <div
+      className="h-96 lg:h-56 animate-pulse rounded-lg flex flex-col lg:flex-row items-center justify-between w-112 m-4 lg:m-8 shadow-lg p-6 bg-gray-200"
+    />
+    <div
+      className="h-96 lg:h-56 animate-pulse rounded-lg flex flex-col lg:flex-row items-center justify-between w-112 m-4 lg:m-8 shadow-lg p-6 bg-gray-200"
+    />
+    <div
+      className="w-1/2 flex items-center justify-center my-12"
+    >
+      <button
+        style={{}}
+      >
+        <div
+          className="cursor-pointer px-4 py-2 lg:px-12 lg:py-4 rounded-lg shadow-lg bg-gray-700"
+          onClick={[Function]}
+        >
+          <p
+            className="text-white font-bold"
+          >
+            Prev
+          </p>
+        </div>
+      </button>
+      <p
+        className="px-8 lg:px-24 text-lg lg:text-2xl font-bold"
+      >
+        1
+      </p>
+      <button
+        style={{}}
+      >
+        <div
+          className="cursor-pointer px-4 py-2 lg:px-12 lg:py-4 rounded-lg shadow-lg bg-gray-700"
+          onClick={[Function]}
+        >
+          <p
+            className="text-white font-bold"
+          >
+            Next
+          </p>
+        </div>
+      </button>
+    </div>
+  </div>,
+]
+`;
+
+exports[`Home page If app renders home page correctly 1`] = `
+[
+  <div
+    className="flex flex-col md:flex-row justify-center items-center pb-12"
+  >
+    <div
+      style={
+        {
+          "boxSizing": "border-box",
+          "display": "inline-block",
+          "margin": 0,
+          "maxWidth": "100%",
+          "overflow": "hidden",
+          "position": "relative",
+        }
+      }
+    >
+      <div
+        style={
+          {
+            "boxSizing": "border-box",
+            "display": "block",
+            "maxWidth": "100%",
+          }
+        }
+      >
+        <img
+          alt=""
+          aria-hidden={true}
+          role="presentation"
+          src="data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMjIwIiBoZWlnaHQ9IjIyMCIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIiB2ZXJzaW9uPSIxLjEiLz4="
+          style={
+            {
+              "border": "none",
+              "display": "block",
+              "margin": 0,
+              "maxWidth": "100%",
+              "padding": 0,
+            }
+          }
+        />
+      </div>
+      <noscript>
+        <img
+          alt="animepedia-icon"
+          decoding="async"
+          src="/main/icon.webp"
+          srcSet="/_next/image?url=%2Fmain%2Ficon.webp&w=256&q=75 1x, /_next/image?url=%2Fmain%2Ficon.webp&w=640&q=75 2x"
+          style={
+            {
+              "border": "none",
+              "bottom": 0,
+              "boxSizing": "border-box",
+              "display": "block",
+              "height": 0,
+              "left": 0,
+              "margin": "auto",
+              "maxHeight": "100%",
+              "maxWidth": "100%",
+              "minHeight": "100%",
+              "minWidth": "100%",
+              "objectFit": undefined,
+              "objectPosition": undefined,
+              "padding": 0,
+              "position": "absolute",
+              "right": 0,
+              "top": 0,
+              "width": 0,
+            }
+          }
+        />
+      </noscript>
+      <img
+        alt="animepedia-icon"
+        decoding="async"
+        src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7"
+        style={
+          {
+            "border": "none",
+            "bottom": 0,
+            "boxSizing": "border-box",
+            "display": "block",
+            "height": 0,
+            "left": 0,
+            "margin": "auto",
+            "maxHeight": "100%",
+            "maxWidth": "100%",
+            "minHeight": "100%",
+            "minWidth": "100%",
+            "objectFit": undefined,
+            "objectPosition": undefined,
+            "padding": 0,
+            "position": "absolute",
+            "right": 0,
+            "top": 0,
+            "width": 0,
+          }
+        }
+      />
+    </div>
+    <div
+      className="flex items-center justify-center flex-col"
+    >
+      <p
+        className="font-extrabold md:ml-8 text-4xl md:text-7xl tracking-tighter"
+      >
+        Animepedia
+      </p>
+    </div>
+  </div>,
+  <div
+    className="flex flex-wrap justify-center items-center"
+  >
+    <div
+      className="h-96 lg:h-56 animate-pulse rounded-lg flex flex-col lg:flex-row items-center justify-between w-112 m-4 lg:m-8 shadow-lg p-6 bg-gray-200"
+    />
+    <div
+      className="h-96 lg:h-56 animate-pulse rounded-lg flex flex-col lg:flex-row items-center justify-between w-112 m-4 lg:m-8 shadow-lg p-6 bg-gray-200"
+    />
+    <div
+      className="h-96 lg:h-56 animate-pulse rounded-lg flex flex-col lg:flex-row items-center justify-between w-112 m-4 lg:m-8 shadow-lg p-6 bg-gray-200"
+    />
+    <div
+      className="h-96 lg:h-56 animate-pulse rounded-lg flex flex-col lg:flex-row items-center justify-between w-112 m-4 lg:m-8 shadow-lg p-6 bg-gray-200"
+    />
+    <div
+      className="h-96 lg:h-56 animate-pulse rounded-lg flex flex-col lg:flex-row items-center justify-between w-112 m-4 lg:m-8 shadow-lg p-6 bg-gray-200"
+    />
+    <div
+      className="h-96 lg:h-56 animate-pulse rounded-lg flex flex-col lg:flex-row items-center justify-between w-112 m-4 lg:m-8 shadow-lg p-6 bg-gray-200"
+    />
+    <div
+      className="h-96 lg:h-56 animate-pulse rounded-lg flex flex-col lg:flex-row items-center justify-between w-112 m-4 lg:m-8 shadow-lg p-6 bg-gray-200"
+    />
+    <div
+      className="h-96 lg:h-56 animate-pulse rounded-lg flex flex-col lg:flex-row items-center justify-between w-112 m-4 lg:m-8 shadow-lg p-6 bg-gray-200"
+    />
+    <div
+      className="h-96 lg:h-56 animate-pulse rounded-lg flex flex-col lg:flex-row items-center justify-between w-112 m-4 lg:m-8 shadow-lg p-6 bg-gray-200"
+    />
+    <div
+      className="h-96 lg:h-56 animate-pulse rounded-lg flex flex-col lg:flex-row items-center justify-between w-112 m-4 lg:m-8 shadow-lg p-6 bg-gray-200"
+    />
+    <div
+      className="h-96 lg:h-56 animate-pulse rounded-lg flex flex-col lg:flex-row items-center justify-between w-112 m-4 lg:m-8 shadow-lg p-6 bg-gray-200"
+    />
+    <div
+      className="h-96 lg:h-56 animate-pulse rounded-lg flex flex-col lg:flex-row items-center justify-between w-112 m-4 lg:m-8 shadow-lg p-6 bg-gray-200"
+    />
+    <div
+      className="w-1/2 flex items-center justify-center my-12"
+    >
+      <button
+        style={{}}
+      >
+        <div
+          className="cursor-pointer px-4 py-2 lg:px-12 lg:py-4 rounded-lg shadow-lg bg-gray-700"
+          onClick={[Function]}
+        >
+          <p
+            className="text-white font-bold"
+          >
+            Prev
+          </p>
+        </div>
+      </button>
+      <p
+        className="px-8 lg:px-24 text-lg lg:text-2xl font-bold"
+      >
+        1
+      </p>
+      <button
+        style={{}}
+      >
+        <div
+          className="cursor-pointer px-4 py-2 lg:px-12 lg:py-4 rounded-lg shadow-lg bg-gray-700"
+          onClick={[Function]}
+        >
+          <p
+            className="text-white font-bold"
+          >
+            Next
+          </p>
+        </div>
+      </button>
+    </div>
+  </div>,
+]
+`;
+
+exports[`ResultsProductPage renders - display mode list 1`] = `
+[
+  <div
+    className="flex flex-col md:flex-row justify-center items-center pb-12"
+  >
+    <div
+      style={
+        {
+          "boxSizing": "border-box",
+          "display": "inline-block",
+          "margin": 0,
+          "maxWidth": "100%",
+          "overflow": "hidden",
+          "position": "relative",
+        }
+      }
+    >
+      <div
+        style={
+          {
+            "boxSizing": "border-box",
+            "display": "block",
+            "maxWidth": "100%",
+          }
+        }
+      >
+        <img
+          alt=""
+          aria-hidden={true}
+          role="presentation"
+          src="data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMjIwIiBoZWlnaHQ9IjIyMCIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIiB2ZXJzaW9uPSIxLjEiLz4="
+          style={
+            {
+              "border": "none",
+              "display": "block",
+              "margin": 0,
+              "maxWidth": "100%",
+              "padding": 0,
+            }
+          }
+        />
+      </div>
+      <noscript>
+        <img
+          alt="animepedia-icon"
+          decoding="async"
+          src="/main/icon.webp"
+          srcSet="/_next/image?url=%2Fmain%2Ficon.webp&w=256&q=75 1x, /_next/image?url=%2Fmain%2Ficon.webp&w=640&q=75 2x"
+          style={
+            {
+              "border": "none",
+              "bottom": 0,
+              "boxSizing": "border-box",
+              "display": "block",
+              "height": 0,
+              "left": 0,
+              "margin": "auto",
+              "maxHeight": "100%",
+              "maxWidth": "100%",
+              "minHeight": "100%",
+              "minWidth": "100%",
+              "objectFit": undefined,
+              "objectPosition": undefined,
+              "padding": 0,
+              "position": "absolute",
+              "right": 0,
+              "top": 0,
+              "width": 0,
+            }
+          }
+        />
+      </noscript>
+      <img
+        alt="animepedia-icon"
+        decoding="async"
+        src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7"
+        style={
+          {
+            "border": "none",
+            "bottom": 0,
+            "boxSizing": "border-box",
+            "display": "block",
+            "height": 0,
+            "left": 0,
+            "margin": "auto",
+            "maxHeight": "100%",
+            "maxWidth": "100%",
+            "minHeight": "100%",
+            "minWidth": "100%",
+            "objectFit": undefined,
+            "objectPosition": undefined,
+            "padding": 0,
+            "position": "absolute",
+            "right": 0,
+            "top": 0,
+            "width": 0,
+          }
+        }
+      />
+    </div>
+    <div
+      className="flex items-center justify-center flex-col"
+    >
+      <p
+        className="font-extrabold md:ml-8 text-4xl md:text-7xl tracking-tighter"
+      >
+        Animepedia
+      </p>
+    </div>
+  </div>,
+  <div
+    className="flex flex-wrap justify-center items-center"
+  >
+    <div
+      className="h-96 lg:h-56 animate-pulse rounded-lg flex flex-col lg:flex-row items-center justify-between w-112 m-4 lg:m-8 shadow-lg p-6 bg-gray-200"
+    />
+    <div
+      className="h-96 lg:h-56 animate-pulse rounded-lg flex flex-col lg:flex-row items-center justify-between w-112 m-4 lg:m-8 shadow-lg p-6 bg-gray-200"
+    />
+    <div
+      className="h-96 lg:h-56 animate-pulse rounded-lg flex flex-col lg:flex-row items-center justify-between w-112 m-4 lg:m-8 shadow-lg p-6 bg-gray-200"
+    />
+    <div
+      className="h-96 lg:h-56 animate-pulse rounded-lg flex flex-col lg:flex-row items-center justify-between w-112 m-4 lg:m-8 shadow-lg p-6 bg-gray-200"
+    />
+    <div
+      className="h-96 lg:h-56 animate-pulse rounded-lg flex flex-col lg:flex-row items-center justify-between w-112 m-4 lg:m-8 shadow-lg p-6 bg-gray-200"
+    />
+    <div
+      className="h-96 lg:h-56 animate-pulse rounded-lg flex flex-col lg:flex-row items-center justify-between w-112 m-4 lg:m-8 shadow-lg p-6 bg-gray-200"
+    />
+    <div
+      className="h-96 lg:h-56 animate-pulse rounded-lg flex flex-col lg:flex-row items-center justify-between w-112 m-4 lg:m-8 shadow-lg p-6 bg-gray-200"
+    />
+    <div
+      className="h-96 lg:h-56 animate-pulse rounded-lg flex flex-col lg:flex-row items-center justify-between w-112 m-4 lg:m-8 shadow-lg p-6 bg-gray-200"
+    />
+    <div
+      className="h-96 lg:h-56 animate-pulse rounded-lg flex flex-col lg:flex-row items-center justify-between w-112 m-4 lg:m-8 shadow-lg p-6 bg-gray-200"
+    />
+    <div
+      className="h-96 lg:h-56 animate-pulse rounded-lg flex flex-col lg:flex-row items-center justify-between w-112 m-4 lg:m-8 shadow-lg p-6 bg-gray-200"
+    />
+    <div
+      className="h-96 lg:h-56 animate-pulse rounded-lg flex flex-col lg:flex-row items-center justify-between w-112 m-4 lg:m-8 shadow-lg p-6 bg-gray-200"
+    />
+    <div
+      className="h-96 lg:h-56 animate-pulse rounded-lg flex flex-col lg:flex-row items-center justify-between w-112 m-4 lg:m-8 shadow-lg p-6 bg-gray-200"
+    />
+    <div
+      className="w-1/2 flex items-center justify-center my-12"
+    >
+      <button
+        style={{}}
+      >
+        <div
+          className="cursor-pointer px-4 py-2 lg:px-12 lg:py-4 rounded-lg shadow-lg bg-gray-700"
+          onClick={[Function]}
+        >
+          <p
+            className="text-white font-bold"
+          >
+            Prev
+          </p>
+        </div>
+      </button>
+      <p
+        className="px-8 lg:px-24 text-lg lg:text-2xl font-bold"
+      >
+        1
+      </p>
+      <button
+        style={{}}
+      >
+        <div
+          className="cursor-pointer px-4 py-2 lg:px-12 lg:py-4 rounded-lg shadow-lg bg-gray-700"
+          onClick={[Function]}
+        >
+          <p
+            className="text-white font-bold"
+          >
+            Next
+          </p>
+        </div>
+      </button>
+    </div>
+  </div>,
+]
+`;

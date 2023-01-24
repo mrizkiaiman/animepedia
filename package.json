@@ -5,7 +5,8 @@
   "scripts": {
     "dev": "next dev",
     "build": "next build",
-    "start": "next dev"
+    "start": "next dev",
+    "test": "jest --watch"
   },
   "dependencies": {
     "@david.kucsai/react-pdf-table": "^0.4.1",
@@ -24,9 +25,17 @@
     "react-to-print": "^2.14.11"
   },
   "devDependencies": {
+    "@testing-library/jest-dom": "^5.16.5",
+    "@testing-library/react": "^12.1.2",
+    "@types/jest": "^29.2.6",
     "@types/react": "^17.0.2",
+    "@types/react-test-renderer": "^18.0.0",
     "autoprefixer": "^10.4.13",
+    "babel-jest": "^29.3.1",
+    "jest": "^29.3.1",
+    "jest-environment-jsdom": "^29.3.1",
     "postcss": "^8.4.21",
+    "react-test-renderer": "^17.0.2",
     "tailwindcss": "^2.2.19",
     "typescript": "4.9.4"
   }

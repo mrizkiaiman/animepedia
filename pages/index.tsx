@@ -1,8 +1,11 @@
-import Head from 'next/head'
-import Image from 'next/image'
+import Home from '@app/pages/home'
+import { GetServerSideProps } from 'next'
 
-import Home from '@components/home'
+export default function App(props: { page: number }) {
+  return <Home queryPage={props.page} />
+}
 
-export default function App() {
-  return <Home />
+export const getServerSideProps: GetServerSideProps = async context => {
+  const { page } = context.query
+  return { props: { page: Number(page) } }
 }

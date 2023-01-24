@@ -24,8 +24,10 @@
       "@pages/*": ["pages/*"],
       "@types/*": ["types/*"],
       "@utils/*": ["utils/*"],
-      "@hooks/*": ["utils/hooks/*"]
-    }
+      "@hooks/*": ["utils/hooks/*"],
+      "@services/*": ["services/*"]
+    },
+    "types": ["@types/jest"]
   },
   "include": ["next-env.d.ts", "**/*.ts", "**/*.tsx", "src/components/anime-card/loader"],
   "exclude": ["node_modules"]

@@ -38,7 +38,6 @@ export const AnimeDetail = () => {
   const pageTitle = isLoading ? 'Loading . . .' : `${title} - Animepedia`
 
   if (isError) return <ErrorPage message={error.message} />
-
   return isLoading ? (
     <PageLoader />
   ) : (

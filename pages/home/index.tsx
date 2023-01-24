@@ -1,9 +1,9 @@
 import * as React from 'react'
-import { useAnimeList } from '@app/services/main/hooks'
-import { HOME } from '@app/constants/seo'
-import { filterToPDFdoc } from 'utils/filterToPDFdoc'
-import { PDFDownloadLink, PDFViewer } from '@react-pdf/renderer'
-import { PDFDocument } from '@components/pdf'
+import { GetServerSideProps } from 'next'
+import { useAnimeList } from '@services/main/hooks'
+import { HOME } from '@constants/seo'
+import { filterToPDFdoc } from '@utils/filterToPDFdoc'
+import { useRouter } from 'next/router'
 
 import { Banner } from '@app/components/banner'
 import { AnimeCard } from '@components/anime-card'
@@ -12,26 +12,36 @@ import { SEO } from '@components-wrapper/seo'
 import { HiOutlineDocumentDownload } from 'react-icons/hi'
 import { ErrorPage } from '@components/error-page'
 import { PaginationButtonMotion } from '@app/components-wrapper/animations/buttons/Pagination'
+import { PDFDownloadLink } from '@react-pdf/renderer'
+import { PDFDocument } from '@components/pdf'
 
-const Home = () => {
+interface HomeProps {
+  queryPage: number
+}
+
+export const Home: React.FC<HomeProps> = ({ queryPage }) => {
   const skeletonLoader = Array(12).fill('-')
-  const [page, setPage] = React.useState<number>(1)
+  const [page, setPage] = React.useState<number>(queryPage ? queryPage : 1)
   const [didInit, setDidInit] = React.useState<boolean>(false)
+
+  const router = useRouter()
 
   const { data, isLoading, error, isError } = useAnimeList(page)
   const list = data?.data || []
   const filteredDoc = React.useMemo(() => filterToPDFdoc(list), [list])
 
   const onPreviousPage = () => {
-    setPage(page => {
-      if (page > 1) return page - 1
-      else return page
-    })
-    window.scrollTo(0, 0)
+    if (page > 1) {
+      setPage(page - 1)
+      window.scrollTo({ top: 0, left: 0, behavior: 'smooth' })
+      router.push(`/?page=${page - 1}`, undefined, { shallow: true })
+    }
   }
+
   const onNextPage = () => {
-    setPage(page => page + 1)
-    window.scrollTo(0, 0)
+    setPage(page + 1)
+    window.scrollTo({ top: 0, left: 0, behavior: 'smooth' })
+    router.push(`/?page=${page + 1}`, undefined, { shallow: true })
   }
 
   React.useEffect(() => {
@@ -74,20 +84,26 @@ const Home = () => {
             ))}
         <div className="w-1/2 flex items-center justify-center my-12">
           <PaginationButtonMotion>
-            <button className="cursor-pointer px-4 py-2 lg:px-12 lg:py-4 rounded-lg shadow-lg bg-gray-700" onClick={onPreviousPage}>
+            <div className="cursor-pointer px-4 py-2 lg:px-12 lg:py-4 rounded-lg shadow-lg bg-gray-700" onClick={onPreviousPage}>
               <p className="text-white font-bold">Prev</p>
-            </button>
+            </div>
           </PaginationButtonMotion>
           <p className="px-8 lg:px-24 text-lg lg:text-2xl font-bold">{page}</p>
           <PaginationButtonMotion>
-            <button className="cursor-pointer px-4 py-2 lg:px-12 lg:py-4 rounded-lg shadow-lg bg-gray-700" onClick={onNextPage}>
+            <div className="cursor-pointer px-4 py-2 lg:px-12 lg:py-4 rounded-lg shadow-lg bg-gray-700" onClick={onNextPage}>
               <p className="text-white font-bold">Next</p>
-            </button>
+            </div>
           </PaginationButtonMotion>
         </div>
       </div>
     </>
   )
+}
+
+export const getServerSideProps: GetServerSideProps = async context => {
+  const { pagewoi } = context.query
+
+  return { props: { pagewoi } }
 }
 
 export default Home
