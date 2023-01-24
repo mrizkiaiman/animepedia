@@ -16,8 +16,8 @@
 
 ## Pages
 ---
-- **[Anime]**(https://animepedia.mrizkiaiman.com) - Pagination list
-- **[YGO Card]**(https://animepedia.mrizkiaiman.com/ygo-cards) - 100+ item list
+- **[Anime](https://animepedia.mrizkiaiman.com)** - Pagination list
+- **[YGO Card](https://animepedia.mrizkiaiman.com/ygo-cards)** - 100+ item list
 
 ## Main tools
 ---
