@@ -1,6 +1,8 @@
 ### Demo: **[animepedia.mrizkiaiman.com](https://animepedia.mrizkiaiman.com)**
 ---
-<img width="1406" alt="Screen Shot 2023-01-23 at 17 06 40" src="https://user-images.githubusercontent.com/53157683/214013462-012e2d64-d5de-4cd7-8bf9-000c0e091d5b.png">
+
+<img width="1412" alt="Screen Shot 2023-01-24 at 20 56 33" src="https://user-images.githubusercontent.com/53157683/214314409-d0465f1a-2c65-403d-a0a3-6a5a6daf69ac.png">
+
 
 ## What is Animepedia?
 ---
@@ -8,9 +10,14 @@
 
 ## Features
 ---
-- Provide simple anime information
+- Provide simple anime & some ygo cards information
 - Export data in a page to `.pdf` file
-- Print information component from anime detail page
+- Print information component from anime & ygo card detail page
+
+## Pages
+---
+- **[Anime]**(https://animepedia.mrizkiaiman.com) - Pagination list
+- **[YGO Card]**(https://animepedia.mrizkiaiman.com/ygo-cards) - 100+ item list
 
 ## Main tools
 ---
