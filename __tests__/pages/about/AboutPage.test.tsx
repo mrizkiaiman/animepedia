@@ -2,7 +2,7 @@ import React from 'react'
 import { QueryClient, QueryClientProvider } from '@tanstack/react-query'
 
 import renderer from 'react-test-renderer'
-import About from './index'
+import About from '@pages/about/index'
 
 //Mocking
 const queryClient = new QueryClient()

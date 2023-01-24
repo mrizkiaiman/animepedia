@@ -3,7 +3,7 @@ import { QueryClient, QueryClientProvider } from '@tanstack/react-query'
 import { fireEvent, screen } from '@testing-library/react'
 
 import renderer from 'react-test-renderer'
-import Home from './index'
+import Home from '@pages/home/index'
 
 //Mocking
 const queryPage = 1
