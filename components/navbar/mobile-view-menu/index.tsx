@@ -1,7 +1,7 @@
 import * as React from 'react'
 import { Transition, Popover } from '@headlessui/react'
 import Link from 'next/link'
-import { NAVBAR_MENU } from '@app/constants'
+import { NAVBAR_MENU, ADDITIONAL_PAGE } from '@app/constants'
 
 import { HiMenu } from 'react-icons/hi'
 import { IoMdClose } from 'react-icons/io'
@@ -31,6 +31,11 @@ export const MobileViewMenu = () => {
                     </div>
                   </Link>
                 ))}
+                <Link href={ADDITIONAL_PAGE.url}>
+                  <div className="px-6 py-4 bg-yellow-300 rounded-b-md">
+                    <p className="font-bold italic">{ADDITIONAL_PAGE.title}</p>
+                  </div>
+                </Link>
               </Popover.Panel>
             </Transition>
           </>

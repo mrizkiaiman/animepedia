@@ -1,5 +1,5 @@
 import * as React from 'react'
-import { NAVBAR_MENU } from '@app/constants'
+import { NAVBAR_MENU, ADDITIONAL_PAGE } from '@app/constants'
 
 import { motion } from 'framer-motion'
 import Image from 'next/image'
@@ -24,10 +24,10 @@ export const Navbar = () => {
               </motion.button>
             ))}
             <motion.button whileHover={{ scale: 1.1 }} whileTap={{ scale: 0.9 }}>
-              <Link href={'/ygo-cards'}>
+              <Link href={ADDITIONAL_PAGE.url}>
                 <p
                   className={`font-extrabold italic bg-yellow-300 px-5 py-2 rounded-xl m-2 text-md hover:bg-gray-700 hover:font-bold hover:text-white hover:dark:bg-zinc-50 hover:dark:text-gray-800`}>
-                  New! 100+ YGO Cards
+                  {ADDITIONAL_PAGE.title}
                 </p>
               </Link>
             </motion.button>

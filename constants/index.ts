@@ -1,3 +1,8 @@
+export const ADDITIONAL_PAGE = {
+  title: 'New! 100+ YGO Cards',
+  url: '/ygo-cards',
+}
+
 export const NAVBAR_MENU = [
   {
     title: 'Home',
