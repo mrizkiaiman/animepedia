@@ -1,6 +1,6 @@
 import * as React from 'react'
 import { useYGOMagicianList } from '@services/main/hooks'
-import { HOME } from '@constants/seo'
+import { HOME_YGO } from '@constants/seo'
 import { dynamicPDFYGOPage } from '@app/utils/dynamicPDFPage'
 
 import { Banner } from '@app/components/banner'
@@ -11,7 +11,7 @@ import { HiOutlineDocumentDownload } from 'react-icons/hi'
 import { ErrorPage } from '@components/error-page'
 import { PDFDownloadLink } from '@react-pdf/renderer'
 import { PDFDocumentYGO } from '@components/pdf'
-import { ExportPDFButtonLoader } from '@app/pages/home/loader'
+import { ExportPDFButtonLoader } from '@app/pages/home/loader/ExportPDFButton'
 
 export const HomeYGO = () => {
   const skeletonLoader = Array(8).fill('-')
@@ -28,7 +28,7 @@ export const HomeYGO = () => {
   if (isError) return <ErrorPage message={error.message} />
   return (
     <>
-      <SEO {...HOME} />
+      <SEO {...HOME_YGO} />
       <Banner />
       {didInit &&
         (isLoading ? (

@@ -35,7 +35,7 @@ export const AnimeDetail = () => {
   const ygoData = data?.data[0]
   const image = ygoData?.card_images[0].image_url
   const name = ygoData?.name
-  const pageTitle = isLoading ? 'Loading . . .' : `${name} - Animepedia`
+  const pageTitle = isLoading ? 'Loading . . .' : `${name || 'No card name'} - Animepedia`
 
   if (isError) return <ErrorPage message={error.message} />
   return isLoading ? (
@@ -51,7 +51,6 @@ export const AnimeDetail = () => {
         <HiOutlinePrinter className="text-white text-xl" />
         <p className="ml-2 font-bold text-white">Print</p>
       </button>
-
       <div ref={printedDocumentRef} className="flex flex-col justify-center items-center ">
         <div className="flex flex-col md:flex-row justift-center items-center py-12">
           <div>{image && <Image priority className="rounded-lg" src={image} height={450} width={330} alt={`${name}-img`} />}</div>

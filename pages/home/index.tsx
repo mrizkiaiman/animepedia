@@ -13,7 +13,8 @@ import { HiOutlineDocumentDownload } from 'react-icons/hi'
 import { ErrorPage } from '@components/error-page'
 import { PDFDownloadLink } from '@react-pdf/renderer'
 import { PDFDocumentAnime } from '@components/pdf'
-import { ExportPDFButtonLoader } from '@app/pages/home/loader'
+import { ExportPDFButtonLoader } from '@app/pages/home/loader/ExportPDFButton'
+import { NextPrevPageButtonLoader } from '@app/pages/home/loader/NextPrevPageButton'
 
 interface HomeProps {
   queryPage: number
@@ -90,17 +91,32 @@ export const Home: React.FC<HomeProps> = ({ queryPage }) => {
               />
             ))}
         <div className="w-1/2 flex items-center justify-center my-12">
-          <motion.button onClick={onPreviousPage} whileHover={{ scale: 1.1 }} transition={{ type: 'spring', stiffness: 200, damping: 10 }}>
-            <div data-testid="prev-page-button" className="cursor-pointer px-4 py-2 lg:px-12 lg:py-4 rounded-lg shadow-lg bg-gray-700">
-              <p className="text-white font-bold">Prev</p>
-            </div>
-          </motion.button>
+          {isLoading ? (
+            <NextPrevPageButtonLoader />
+          ) : (
+            <motion.button
+              onClick={onPreviousPage}
+              whileHover={{ scale: 1.1 }}
+              transition={{ type: 'spring', stiffness: 200, damping: 10 }}>
+              <div
+                data-testid="prev-page-button"
+                className="cursor-pointer flex justify-center items-center w-24 h-10 md:w-28 md:h-12 rounded-lg shadow-lg bg-gray-700">
+                <p className="text-white font-bold">Prev</p>
+              </div>
+            </motion.button>
+          )}
           <p className="px-8 lg:px-24 text-lg lg:text-2xl font-bold">{page}</p>
-          <motion.button onClick={onNextPage} whileHover={{ scale: 1.1 }} transition={{ type: 'spring', stiffness: 200, damping: 10 }}>
-            <div data-testid="next-page-button" className="cursor-pointer px-4 py-2 lg:px-12 lg:py-4 rounded-lg shadow-lg bg-gray-700">
-              <p className="text-white font-bold">Next</p>
-            </div>
-          </motion.button>
+          {isLoading ? (
+            <NextPrevPageButtonLoader />
+          ) : (
+            <motion.button onClick={onNextPage} whileHover={{ scale: 1.1 }} transition={{ type: 'spring', stiffness: 200, damping: 10 }}>
+              <div
+                data-testid="next-page-button"
+                className="cursor-pointer flex justify-center items-center w-24 h-10 md:w-28 md:h-12 rounded-lg shadow-lg bg-gray-700">
+                <p className="text-white font-bold">Next</p>
+              </div>
+            </motion.button>
+          )}
         </div>
       </div>
     </>

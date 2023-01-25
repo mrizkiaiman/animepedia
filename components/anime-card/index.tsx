@@ -23,7 +23,7 @@ export const AnimeCard: React.FC<AnimeCardProps> = ({ score, title, img, synopsi
         <div className="rounded-lg flex my-8 lg:my-4 lg:h-56 h-112 flex-col lg:flex-row items-center justify-between md:w-96 m-4 lg:m-8 shadow-lg p-6 cursor-pointer">
           <Image className="rounded-lg" src={img} height={200} width={150} alt={`${title}-img`} />
           <div className="w-full lg:w-3/4 lg:ml-8 mt-4 lg:mt-0">
-            <p className="font-bold text-s">{title}</p>
+            <p className="line-clamp-2 font-bold">{title}</p>
             <div className="my-2">
               <p className="text-sm text-gray-500">
                 <strong>Score:</strong> {score}

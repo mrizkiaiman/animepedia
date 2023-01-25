@@ -7,7 +7,6 @@ export const animeKeys = {
 
 export const ygoKeys = {
   all: ['ygo'] as const,
-
   details: () => [...ygoKeys.all, 'detail'] as const,
   detail: (id: string) => [ygoKeys.details(), id] as const,
 }

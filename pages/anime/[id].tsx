@@ -23,7 +23,7 @@ const Genre = (props: { value: string }) => (
 
 export const AnimeDetail = () => {
   const router = useRouter()
-  const { id, action } = router.query
+  const { id } = router.query
   const animeId = id as string
 
   const printedDocumentRef = React.useRef(null)
@@ -51,7 +51,6 @@ export const AnimeDetail = () => {
         <HiOutlinePrinter className="text-white text-xl" />
         <p className="ml-2 font-bold text-white">Print</p>
       </button>
-
       <div ref={printedDocumentRef} className="flex flex-col justify-center items-center ">
         <div className="flex flex-col md:flex-row justift-center items-center py-12">
           <div>{image && <Image priority className="rounded-lg" src={image} height={450} width={330} alt={`${title}-img`} />}</div>
