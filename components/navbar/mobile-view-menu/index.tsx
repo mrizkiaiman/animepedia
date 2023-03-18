@@ -31,11 +31,11 @@ export const MobileViewMenu = () => {
                     </div>
                   </Link>
                 ))}
-                <Link href={ADDITIONAL_PAGE.url}>
+                {/* <Link href={ADDITIONAL_PAGE.url}>
                   <div className="px-6 py-4 bg-yellow-300 rounded-b-md">
                     <p className="font-bold italic">{ADDITIONAL_PAGE.title}</p>
                   </div>
-                </Link>
+                </Link> */}
               </Popover.Panel>
             </Transition>
           </>

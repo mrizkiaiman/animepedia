@@ -13,7 +13,7 @@ function MyApp({ Component, pageProps }: AppProps) {
     <div>
       <QueryClientProvider client={queryClient}>
         <Navbar />
-        <div className={`px-8 md:px-52 bg-white`}>
+        <div className={`px-8 xl:px-36 bg-white`}>
           <div className="md:mx-7 py-12">
             <Component {...pageProps} />
           </div>

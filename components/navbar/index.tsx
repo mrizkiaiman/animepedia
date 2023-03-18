@@ -23,14 +23,14 @@ export const Navbar = () => {
                 </Link>
               </motion.button>
             ))}
-            <motion.button whileHover={{ scale: 1.1 }} whileTap={{ scale: 0.9 }}>
+            {/* <motion.button whileHover={{ scale: 1.1 }} whileTap={{ scale: 0.9 }}>
               <Link href={ADDITIONAL_PAGE.url}>
                 <p
                   className={`font-extrabold italic bg-yellow-300 px-5 py-2 rounded-xl m-2 text-md hover:bg-gray-700 hover:font-bold hover:text-white hover:dark:bg-zinc-50 hover:dark:text-gray-800`}>
                   {ADDITIONAL_PAGE.title}
                 </p>
               </Link>
-            </motion.button>
+            </motion.button> */}
           </div>
           <a href="https://mrizkiaiman.com" target="_blank" rel="noopener noreferrer">
             <div className="z-10 block items-center">

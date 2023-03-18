@@ -19,7 +19,11 @@ const About = () => {
         <div className="w-full lg:w-1/2 mb-12">
           <p className="text-center lg:text-left text-4xl lg:text-7xl font-extrabold tracking-tighter">Animepedia</p>
           <p className="text-center lg:text-left text-xl lg:text-3xl font-bold tracking-tighter mt-6">
-            Provides the most complete anime database for your needs
+            Download data based on
+            <a href="https://jikan.moe/" className="mx-1 italic text-gray-500">
+              Jikan - MyAnimeList API
+            </a>{' '}
+            to .pdf file
           </p>
         </div>
         <Image src="/about/mascot.webp" width={600} height={600} alt="animepedia-mascot" priority />

@@ -16,15 +16,15 @@ export const NAVBAR_MENU = [
 
 export const MAIN_TOOLS = [
   {
-    value: 'NextJS - ReactJS Framework',
+    value: 'Next.js (v10)',
   },
   {
-    value: 'TypeScript - JavaScript Superset',
+    value: 'TypeScript',
   },
   {
-    value: '@tanstack/query - Client-side API Management',
+    value: '@tanstack/query',
   },
   {
-    value: 'TailwindCSS - UI Styling',
+    value: 'Tailwind CSS',
   },
 ]
